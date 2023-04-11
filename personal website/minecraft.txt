@@ -1,0 +1,944 @@
+Microsoft Windows [Version 10.0.19042.1586]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\SU - NB0103>pip3 install --upgrade minerl
+Collecting minerl
+  Downloading minerl-0.4.4.tar.gz (70.1 MB)
+     |████████████████████████████████| 70.1 MB 2.2 MB/s
+  Preparing metadata (setup.py) ... done
+Collecting gym<0.20,>=0.13.1
+  Downloading gym-0.19.0.tar.gz (1.6 MB)
+     |████████████████████████████████| 1.6 MB 3.3 MB/s
+  Preparing metadata (setup.py) ... done
+Collecting opencv-python>=4.1.0.25
+  Downloading opencv_python-4.5.5.64-cp36-abi3-win_amd64.whl (35.4 MB)
+     |████████████████████████████████| 35.4 MB 216 kB/s
+Requirement already satisfied: setuptools>=49.2.0 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from minerl) (56.0.0)
+Collecting tqdm>=4.32.2
+  Downloading tqdm-4.63.0-py2.py3-none-any.whl (76 kB)
+     |████████████████████████████████| 76 kB 734 kB/s
+Requirement already satisfied: numpy>=1.16.2 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from minerl) (1.21.2)
+Collecting requests>=2.20.0
+  Downloading requests-2.27.1-py2.py3-none-any.whl (63 kB)
+     |████████████████████████████████| 63 kB 671 kB/s
+Requirement already satisfied: ipython>=7.5.0 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from minerl) (7.26.0)
+Collecting lxml>=4.3.3
+  Downloading lxml-4.8.0-cp39-cp39-win_amd64.whl (3.6 MB)
+     |████████████████████████████████| 3.6 MB 1.1 MB/s
+Collecting psutil>=5.6.2
+  Downloading psutil-5.9.0-cp39-cp39-win_amd64.whl (245 kB)
+     |████████████████████████████████| 245 kB 3.2 MB/s
+Collecting Pyro4>=4.76
+  Downloading Pyro4-4.82-py2.py3-none-any.whl (89 kB)
+     |████████████████████████████████| 89 kB 1.8 MB/s
+Collecting coloredlogs>=10.0
+  Downloading coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+     |████████████████████████████████| 46 kB 1.7 MB/s
+Requirement already satisfied: pillow>=8.0.0 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from minerl) (8.4.0)
+Requirement already satisfied: matplotlib>=3.2.2 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from minerl) (3.5.0)
+Collecting dill>=0.3.1.1
+  Downloading dill-0.3.4-py2.py3-none-any.whl (86 kB)
+     |████████████████████████████████| 86 kB 2.0 MB/s
+Collecting daemoniker>=0.2.3
+  Downloading daemoniker-0.2.3-py3-none-any.whl (33 kB)
+Collecting xmltodict==0.12.0
+  Downloading xmltodict-0.12.0-py2.py3-none-any.whl (9.2 kB)
+Collecting inflection>=0.3.1
+  Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Requirement already satisfied: jinja2>=2.11.2 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from minerl) (3.0.3)
+Collecting simple-term-menu
+  Downloading simple_term_menu-1.4.1-py3-none-any.whl (25 kB)
+Collecting bullet
+  Downloading bullet-2.2.0-py3-none-any.whl (10 kB)
+Collecting filelock
+  Downloading filelock-3.6.0-py3-none-any.whl (10.0 kB)
+Collecting pytest
+  Downloading pytest-7.1.0-py3-none-any.whl (297 kB)
+     |████████████████████████████████| 297 kB 2.2 MB/s
+Collecting humanfriendly>=9.1
+  Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+     |████████████████████████████████| 86 kB 1.2 MB/s
+Collecting cloudpickle<1.7.0,>=1.2.0
+  Downloading cloudpickle-1.6.0-py3-none-any.whl (23 kB)
+Requirement already satisfied: matplotlib-inline in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from ipython>=7.5.0->minerl) (0.1.2)
+Requirement already satisfied: decorator in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from ipython>=7.5.0->minerl) (5.0.9)
+Requirement already satisfied: pygments in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from ipython>=7.5.0->minerl) (2.9.0)
+Requirement already satisfied: jedi>=0.16 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from ipython>=7.5.0->minerl) (0.18.0)
+Requirement already satisfied: traitlets>=4.2 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from ipython>=7.5.0->minerl) (5.0.5)
+Requirement already satisfied: backcall in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from ipython>=7.5.0->minerl) (0.2.0)
+Requirement already satisfied: pickleshare in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from ipython>=7.5.0->minerl) (0.7.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from ipython>=7.5.0->minerl) (3.0.19)
+Requirement already satisfied: colorama in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from ipython>=7.5.0->minerl) (0.4.4)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from jinja2>=2.11.2->minerl) (2.0.1)
+Requirement already satisfied: packaging>=20.0 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from matplotlib>=3.2.2->minerl) (21.3)
+Requirement already satisfied: pyparsing>=2.2.1 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from matplotlib>=3.2.2->minerl) (3.0.6)
+Requirement already satisfied: kiwisolver>=1.0.1 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from matplotlib>=3.2.2->minerl) (1.3.2)
+Requirement already satisfied: fonttools>=4.22.0 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from matplotlib>=3.2.2->minerl) (4.28.2)
+Requirement already satisfied: setuptools-scm>=4 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from matplotlib>=3.2.2->minerl) (6.3.2)
+Requirement already satisfied: cycler>=0.10 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from matplotlib>=3.2.2->minerl) (0.11.0)
+Requirement already satisfied: python-dateutil>=2.7 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from matplotlib>=3.2.2->minerl) (2.8.2)
+Collecting serpent>=1.27
+  Downloading serpent-1.40-py3-none-any.whl (9.6 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.9-py2.py3-none-any.whl (138 kB)
+     |████████████████████████████████| 138 kB 2.2 MB/s
+Collecting charset-normalizer~=2.0.0
+  Downloading charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Collecting idna<4,>=2.5
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+     |████████████████████████████████| 61 kB 2.0 MB/s
+Collecting certifi>=2017.4.17
+  Downloading certifi-2021.10.8-py2.py3-none-any.whl (149 kB)
+     |████████████████████████████████| 149 kB 1.3 MB/s
+Collecting pluggy<2.0,>=0.12
+  Downloading pluggy-1.0.0-py2.py3-none-any.whl (13 kB)
+Collecting iniconfig
+  Downloading iniconfig-1.1.1-py2.py3-none-any.whl (5.0 kB)
+Collecting atomicwrites>=1.0
+  Downloading atomicwrites-1.4.0-py2.py3-none-any.whl (6.8 kB)
+Requirement already satisfied: tomli>=1.0.0 in c:\users\su - nb0103\appdata\local\programs\python\python39\lib\site-packages (from pytest->minerl) (1.2.2)
+Collecting py>=1.8.2
+  Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+     |████████████████████████████████| 98 kB 3.3 MB/s
+Requirement already satisfied: attrs>=19.2.0 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from pytest->minerl) (21.2.0)
+Collecting pyreadline3
+  Downloading pyreadline3-3.4.1-py3-none-any.whl (95 kB)
+     |████████████████████████████████| 95 kB 3.3 MB/s
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from jedi>=0.16->ipython>=7.5.0->minerl) (0.8.2)
+Requirement already satisfied: wcwidth in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->ipython>=7.5.0->minerl) (0.2.5)
+Requirement already satisfied: six>=1.5 in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from python-dateutil>=2.7->matplotlib>=3.2.2->minerl) (1.16.0)
+Requirement already satisfied: ipython-genutils in c:\users\su - nb0103\appdata\roaming\python\python39\site-packages (from traitlets>=4.2->ipython>=7.5.0->minerl) (0.2.0)
+Using legacy 'setup.py install' for minerl, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for gym, since package 'wheel' is not installed.
+Installing collected packages: pyreadline3, urllib3, serpent, py, pluggy, iniconfig, idna, humanfriendly, cloudpickle, charset-normalizer, certifi, atomicwrites, xmltodict, tqdm, simple-term-menu, requests, pytest, Pyro4, psutil, opencv-python, lxml, inflection, gym, filelock, dill, daemoniker, coloredlogs, bullet, minerl
+    Running setup.py install for gym ... done
+    Running setup.py install for minerl ... error
+    ERROR: Command errored out with exit status 1:
+     command: 'C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\SU - NB0103\\AppData\\Local\\Temp\\pip-install-bpz909c4\\minerl_dc6fc49e7cb74f9490844f857e9b4466\\setup.py'"'"'; __file__='"'"'C:\\Users\\SU - NB0103\\AppData\\Local\\Temp\\pip-install-bpz909c4\\minerl_dc6fc49e7cb74f9490844f857e9b4466\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\SU - NB0103\AppData\Local\Temp\pip-record-uole7s4s\install-record.txt' --single-version-externally-managed --compile --install-headers 'C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\Include\minerl'
+         cwd: C:\Users\SU - NB0103\AppData\Local\Temp\pip-install-bpz909c4\minerl_dc6fc49e7cb74f9490844f857e9b4466\
+    Complete output (714 lines):
+    running install
+    running build
+    running build_py
+    creating build
+    creating build\lib
+    creating build\lib\minerl
+    copying minerl\__init__.py -> build\lib\minerl
+    creating build\lib\minerl\data
+    copying minerl\data\buffered_batch_iter.py -> build\lib\minerl\data
+    copying minerl\data\data_pipeline.py -> build\lib\minerl\data
+    copying minerl\data\download.py -> build\lib\minerl\data
+    copying minerl\data\version.py -> build\lib\minerl\data
+    copying minerl\data\__init__.py -> build\lib\minerl\data
+    creating build\lib\minerl\env
+    copying minerl\env\comms.py -> build\lib\minerl\env
+    copying minerl\env\exceptions.py -> build\lib\minerl\env
+    copying minerl\env\malmo.py -> build\lib\minerl\env
+    copying minerl\env\recording.py -> build\lib\minerl\env
+    copying minerl\env\_fake.py -> build\lib\minerl\env
+    copying minerl\env\_multiagent.py -> build\lib\minerl\env
+    copying minerl\env\_singleagent.py -> build\lib\minerl\env
+    copying minerl\env\__init__.py -> build\lib\minerl\env
+    creating build\lib\minerl\herobraine
+    copying minerl\herobraine\envs.py -> build\lib\minerl\herobraine
+    copying minerl\herobraine\env_spec.py -> build\lib\minerl\herobraine
+    copying minerl\herobraine\test_env_spec.py -> build\lib\minerl\herobraine
+    copying minerl\herobraine\wrapper.py -> build\lib\minerl\herobraine
+    copying minerl\herobraine\__init__.py -> build\lib\minerl\herobraine
+    creating build\lib\minerl\interactor
+    copying minerl\interactor\__init__.py -> build\lib\minerl\interactor
+    copying minerl\interactor\__main__.py -> build\lib\minerl\interactor
+    creating build\lib\minerl\utils
+    copying minerl\utils\docs.py -> build\lib\minerl\utils
+    copying minerl\utils\launch.py -> build\lib\minerl\utils
+    copying minerl\utils\process_watcher.py -> build\lib\minerl\utils
+    copying minerl\utils\test.py -> build\lib\minerl\utils
+    copying minerl\utils\__init__.py -> build\lib\minerl\utils
+    creating build\lib\minerl\viewer
+    copying minerl\viewer\primitives.py -> build\lib\minerl\viewer
+    copying minerl\viewer\scaled_image_display.py -> build\lib\minerl\viewer
+    copying minerl\viewer\trajectory_display.py -> build\lib\minerl\viewer
+    copying minerl\viewer\trajectory_display_controller.py -> build\lib\minerl\viewer
+    copying minerl\viewer\__init__.py -> build\lib\minerl\viewer
+    copying minerl\viewer\__main__.py -> build\lib\minerl\viewer
+    creating build\lib\minerl\data\assets
+    copying minerl\data\assets\__init__.py -> build\lib\minerl\data\assets
+    creating build\lib\minerl\data\pipeline
+    copying minerl\data\pipeline\download2.py -> build\lib\minerl\data\pipeline
+    copying minerl\data\pipeline\generate.py -> build\lib\minerl\data\pipeline
+    copying minerl\data\pipeline\make_minecrafts.py -> build\lib\minerl\data\pipeline
+    copying minerl\data\pipeline\merge.py -> build\lib\minerl\data\pipeline
+    copying minerl\data\pipeline\pipeline.py -> build\lib\minerl\data\pipeline
+    copying minerl\data\pipeline\pipeline_clean.py -> build\lib\minerl\data\pipeline
+    copying minerl\data\pipeline\publish.py -> build\lib\minerl\data\pipeline
+    copying minerl\data\pipeline\render.py -> build\lib\minerl\data\pipeline
+    copying minerl\data\pipeline\__init__.py -> build\lib\minerl\data\pipeline
+    creating build\lib\minerl\data\util
+    copying minerl\data\util\blacklist.py -> build\lib\minerl\data\util
+    copying minerl\data\util\constants.py -> build\lib\minerl\data\util
+    copying minerl\data\util\__init__.py -> build\lib\minerl\data\util
+    creating build\lib\minerl\data\pipeline\tests
+    copying minerl\data\pipeline\tests\old_data_pipeline.py -> build\lib\minerl\data\pipeline\tests
+    copying minerl\data\pipeline\tests\test_pipeline.py -> build\lib\minerl\data\pipeline\tests
+    copying minerl\data\pipeline\tests\test_publish_vec_handler.py -> build\lib\minerl\data\pipeline\tests
+    copying minerl\data\pipeline\tests\__init__.py -> build\lib\minerl\data\pipeline\tests
+    creating build\lib\minerl\herobraine\env_specs
+    copying minerl\herobraine\env_specs\basalt_specs.py -> build\lib\minerl\herobraine\env_specs
+    copying minerl\herobraine\env_specs\navigate_specs.py -> build\lib\minerl\herobraine\env_specs
+    copying minerl\herobraine\env_specs\obtain_specs.py -> build\lib\minerl\herobraine\env_specs
+    copying minerl\herobraine\env_specs\simple_embodiment.py -> build\lib\minerl\herobraine\env_specs
+    copying minerl\herobraine\env_specs\survival_specs.py -> build\lib\minerl\herobraine\env_specs
+    copying minerl\herobraine\env_specs\test_env_regressions.py -> build\lib\minerl\herobraine\env_specs
+    copying minerl\herobraine\env_specs\treechop_specs.py -> build\lib\minerl\herobraine\env_specs
+    copying minerl\herobraine\env_specs\__init__.py -> build\lib\minerl\herobraine\env_specs
+    creating build\lib\minerl\herobraine\hero
+    copying minerl\herobraine\hero\handler.py -> build\lib\minerl\herobraine\hero
+    copying minerl\herobraine\hero\mc.py -> build\lib\minerl\herobraine\hero
+    copying minerl\herobraine\hero\spaces.py -> build\lib\minerl\herobraine\hero
+    copying minerl\herobraine\hero\test_spaces.py -> build\lib\minerl\herobraine\hero
+    copying minerl\herobraine\hero\__init__.py -> build\lib\minerl\herobraine\hero
+    creating build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\compat_v0.py -> build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\downscale_wrapper.py -> build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\obfuscation_wrapper.py -> build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\retry_reset_on_early_death_wrapper.py -> build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\test_util.py -> build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\test_wrappers.py -> build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\util.py -> build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\vector_wrapper.py -> build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\video_recording_wrapper.py -> build\lib\minerl\herobraine\wrappers
+    copying minerl\herobraine\wrappers\__init__.py -> build\lib\minerl\herobraine\wrappers
+    creating build\lib\minerl\herobraine\hero\handlers
+    copying minerl\herobraine\hero\handlers\test_handlers.py -> build\lib\minerl\herobraine\hero\handlers
+    copying minerl\herobraine\hero\handlers\translation.py -> build\lib\minerl\herobraine\hero\handlers
+    copying minerl\herobraine\hero\handlers\util.py -> build\lib\minerl\herobraine\hero\handlers
+    copying minerl\herobraine\hero\handlers\__init__.py -> build\lib\minerl\herobraine\hero\handlers
+    creating build\lib\minerl\herobraine\hero\handlers\agent
+    copying minerl\herobraine\hero\handlers\agent\action.py -> build\lib\minerl\herobraine\hero\handlers\agent
+    copying minerl\herobraine\hero\handlers\agent\misc.py -> build\lib\minerl\herobraine\hero\handlers\agent
+    copying minerl\herobraine\hero\handlers\agent\quit.py -> build\lib\minerl\herobraine\hero\handlers\agent
+    copying minerl\herobraine\hero\handlers\agent\reward.py -> build\lib\minerl\herobraine\hero\handlers\agent
+    copying minerl\herobraine\hero\handlers\agent\start.py -> build\lib\minerl\herobraine\hero\handlers\agent
+    copying minerl\herobraine\hero\handlers\agent\__init__.py -> build\lib\minerl\herobraine\hero\handlers\agent
+    creating build\lib\minerl\herobraine\hero\handlers\server
+    copying minerl\herobraine\hero\handlers\server\misc.py -> build\lib\minerl\herobraine\hero\handlers\server
+    copying minerl\herobraine\hero\handlers\server\navigation.py -> build\lib\minerl\herobraine\hero\handlers\server
+    copying minerl\herobraine\hero\handlers\server\quit.py -> build\lib\minerl\herobraine\hero\handlers\server
+    copying minerl\herobraine\hero\handlers\server\start.py -> build\lib\minerl\herobraine\hero\handlers\server
+    copying minerl\herobraine\hero\handlers\server\world.py -> build\lib\minerl\herobraine\hero\handlers\server
+    copying minerl\herobraine\hero\handlers\server\__init__.py -> build\lib\minerl\herobraine\hero\handlers\server
+    creating build\lib\minerl\herobraine\hero\handlers\agent\actions
+    copying minerl\herobraine\hero\handlers\agent\actions\camera.py -> build\lib\minerl\herobraine\hero\handlers\agent\actions
+    copying minerl\herobraine\hero\handlers\agent\actions\craft.py -> build\lib\minerl\herobraine\hero\handlers\agent\actions
+    copying minerl\herobraine\hero\handlers\agent\actions\equip.py -> build\lib\minerl\herobraine\hero\handlers\agent\actions
+    copying minerl\herobraine\hero\handlers\agent\actions\keyboard.py -> build\lib\minerl\herobraine\hero\handlers\agent\actions
+    copying minerl\herobraine\hero\handlers\agent\actions\place.py -> build\lib\minerl\herobraine\hero\handlers\agent\actions
+    copying minerl\herobraine\hero\handlers\agent\actions\smelt.py -> build\lib\minerl\herobraine\hero\handlers\agent\actions
+    copying minerl\herobraine\hero\handlers\agent\actions\__init__.py -> build\lib\minerl\herobraine\hero\handlers\agent\actions
+    creating build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\compass.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\damage_source.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\equipped_item.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\guicontainer.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\inventory.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\lifestats.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\location_stats.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\mc_base_stats.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\pov.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    copying minerl\herobraine\hero\handlers\agent\observations\__init__.py -> build\lib\minerl\herobraine\hero\handlers\agent\observations
+    running egg_info
+    writing minerl.egg-info\PKG-INFO
+    writing dependency_links to minerl.egg-info\dependency_links.txt
+    writing requirements to minerl.egg-info\requires.txt
+    writing top-level names to minerl.egg-info\top_level.txt
+    adding license file 'LICENSE' (matched pattern 'LICEN[CS]E*')
+    reading manifest file 'minerl.egg-info\SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    no previously-included directories found matching 'minerl\Malmo\Minecraft\.gradle'
+    no previously-included directories found matching 'minerl\Malmo\Minecraft\bin'
+    no previously-included directories found matching 'minerl\Malmo\Minecraft\build'
+    no previously-included directories found matching 'minerl\Malmo\Minecraft\run\gradle'
+    no previously-included directories found matching 'minerl\Malmo\Minecraft\.minecraft'
+    no previously-included directories found matching 'minerl\Malmo\Minecraft\.minecraftserver'
+    no previously-included directories found matching 'minerl\Malmo\Minecraft\run\saves'
+    warning: no previously-included files matching '*.lock' found anywhere in distribution
+    warning: no previously-included files matching '*fuse_hidden*' found anywhere in distribution
+    writing manifest file 'minerl.egg-info\SOURCES.txt'
+    creating build\lib\minerl\Malmo
+    creating build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\CMakeLists.txt -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\CREDITS-fml.txt -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\LICENSE-new.txt -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\MinecraftForge-Credits.txt -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\Paulscode IBXM Library License.txt -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\Paulscode SoundSystem CodecIBXM License.txt -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\README.txt -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\build.gradle -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\gradlew -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\gradlew.bat -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\launchClient.bat -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\launchClient.sh -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\launch_minecraft_in_background.py -> build\lib\minerl\Malmo\Minecraft
+    copying minerl\Malmo\Minecraft\wait_for_port.sh -> build\lib\minerl\Malmo\Minecraft
+    creating build\lib\minerl\Malmo\Minecraft\gradle
+    creating build\lib\minerl\Malmo\Minecraft\gradle\wrapper
+    copying minerl\Malmo\Minecraft\gradle\wrapper\gradle-wrapper.jar -> build\lib\minerl\Malmo\Minecraft\gradle\wrapper
+    copying minerl\Malmo\Minecraft\gradle\wrapper\gradle-wrapper.properties -> build\lib\minerl\Malmo\Minecraft\gradle\wrapper
+    creating build\lib\minerl\Malmo\Minecraft\run
+    copying minerl\Malmo\Minecraft\run\options.txt -> build\lib\minerl\Malmo\Minecraft\run
+    creating build\lib\minerl\Malmo\Minecraft\run\config
+    copying minerl\Malmo\Minecraft\run\config\forge.cfg -> build\lib\minerl\Malmo\Minecraft\run\config
+    copying minerl\Malmo\Minecraft\run\config\forgeChunkLoading.cfg -> build\lib\minerl\Malmo\Minecraft\run\config
+    copying minerl\Malmo\Minecraft\run\config\malmomodCLIENTPermanent.cfg -> build\lib\minerl\Malmo\Minecraft\run\config
+    creating build\lib\minerl\Malmo\Minecraft\shared_configs
+    copying minerl\Malmo\Minecraft\shared_configs\Attach on 1044.run.xml -> build\lib\minerl\Malmo\Minecraft\shared_configs
+    copying minerl\Malmo\Minecraft\shared_configs\Interactive + Auto-debugger.run.xml -> build\lib\minerl\Malmo\Minecraft\shared_configs
+    copying minerl\Malmo\Minecraft\shared_configs\Wait For Port.run.xml -> build\lib\minerl\Malmo\Minecraft\shared_configs
+    copying minerl\Malmo\Minecraft\shared_configs\interactive.py.run.xml -> build\lib\minerl\Malmo\Minecraft\shared_configs
+    creating build\lib\minerl\Malmo\Minecraft\src
+    creating build\lib\minerl\Malmo\Minecraft\src\main
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\EpisodeEventWrapper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\IState.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MalmoMod.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MalmoModGuiOptions.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MixinTextureHandler.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\OverclockingClassTransformer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\OverclockingPlugin.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\StateEpisode.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\StateMachine.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\TestLogHandler.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client\ClientState.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client\ClientStateMachine.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client\InternalKey.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client\KeyManager.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client\MalmoEnvServer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client\MalmoModClient.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client\VideoHook.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client\VideoProducedObserver.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Client
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher\GradleForgeHacks.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher\GradleStart.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher\GradleStartCommon.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher\GradleStartServer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher\tweakers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher\tweakers\AccessTransformerTweaker.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher\tweakers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher\tweakers\CoremodTweaker.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Launcher\tweakers
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces\IAudioProducer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces\ICommandHandler.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces\IObservationProducer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces\IPerformanceProducer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces\IRewardProducer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces\IVideoProducer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces\IWantToQuit.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces\IWorldDecorator.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces\IWorldGenerator.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlerInterfaces
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AbsoluteMovementCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromCatchingMobImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromCollectingItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromCollectingItemQuantityImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromCraftingItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromPossessingItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromReachingCommandQuotaImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromReachingPositionImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromSmeltingItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromTimeUpImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AgentQuitFromTouchingBlockTypeImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\AnimationDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\BiomeGeneratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\BuildBattleDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\CameraCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ChatCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ClassroomDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ColourMapProducerImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\CommandBase.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\CommandForAttackAndUseImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\CommandForHotBarKeysImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\CommandForKey.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\CommandForWheeledRobotNavigationImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\CommandGroup.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ContinuousMovementCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\DefaultWorldGeneratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\DepthProducerImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\DiscreteMovementCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\DrawingDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\EquipCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\FileBasedPerformanceProducerImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\FileWorldGeneratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\FlatWorldGeneratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\HandlerBase.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\HumanLevelCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\InventoryCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\LuminanceProducerImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\MarkingDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\MazeDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\MissionBehaviour.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\MissionQuitCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\MovingTargetDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\MultidimensionalReward.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\NavigationDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\NearbyCraftCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\NearbySmeltCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromAchievementsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromChatImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromCompassImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromComposite.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromDamageImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromDiscreteCellImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromDistanceImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromEquippedItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromFullInventoryImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromFullStatsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromGridImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromHotBarImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromHumanImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromNearbyEntitiesImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromRayImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromRecentCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromServer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromSubgoalPositionListImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromSystemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ObservationFromTurnSchedulerImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\PauseCommandImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\PlaceCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\QuitFromComposite.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\QuitFromTimeUpBase.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RandomizedStartDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardBase.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForCatchingMobImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForCollectingItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForCollectingItemQuantityImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForCraftingItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForDamagingEntityImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForDiscardingItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForDistanceTraveledToCompassTargetImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForItemBase.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForMissionEndImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForPossessingItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForReachingPositionImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForSendingCommandImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForSendingMatchingChatMessageImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForSmeltingItemImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForStructureCopyingImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForTimeTakenImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardForTouchingBlockTypeImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardFromTeamImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\RewardGroup.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ServerQuitFromTimeUpImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\ServerQuitWhenAnyAgentFinishesImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\SimpleCraftCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\SnakeDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\TurnBasedCommandsImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\VideoProducerImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\VillageSpawnDecoratorImplementation.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers\WorldFromComposite.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\MissionHandlers
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinEntityRandom.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinForgeHookStatsFix.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinLargeInventory.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinLargeInventorySlots.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinMergeStatsFix.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinMinecraftGameloop.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinMinecraftServerRun.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinNoGuiInteract.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinRandomSkinTexture.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinSyncClientStats.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinUpdateChunksNoTimeout.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins\MixinWorldProviderSpawn.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Mixins
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Schemas
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Schemas\.gitignore -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Schemas
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Schemas\README.txt -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Schemas
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Server
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Server\MalmoModServer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Server
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Server\ServerState.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Server
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Server\ServerStateMachine.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Server
+    creating build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\AddressHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\AnimationDrawingHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\AuthenticationHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\BlockDrawingHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\CraftingHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\Discrete.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\EnvironmentHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\EvaluationHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\JSONWorldDataHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\LogHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\MapFileHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\MineRLTypeHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\MinecraftTypeHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\PauseTimer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\PerformanceHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\PositionHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\SchemaHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\ScoreHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\ScreenHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\SeedHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\TCPInputPoller.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\TCPSocketChannel.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\TCPUtils.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\TextureHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\TimeHelper.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    copying minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils\WrappedTimer.java -> build\lib\minerl\Malmo\Minecraft\src\main\java\com\microsoft\Malmo\Utils
+    creating build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\.gitignore -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\README.txt -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\annotate.fsh -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\annotate.vsh -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\lum.fsh -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\lum.vsh -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\malmomod_at.cfg -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\mcmod.info -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\mixins.overclocking.malmomod.json -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\schemas.index -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    copying minerl\Malmo\Minecraft\src\main\resources\version.properties -> build\lib\minerl\Malmo\Minecraft\src\main\resources
+    creating build\lib\minerl\Malmo\Minecraft\src\main\resources\assets
+    creating build\lib\minerl\Malmo\Minecraft\src\main\resources\assets\MalmoMod
+    creating build\lib\minerl\Malmo\Minecraft\src\main\resources\assets\MalmoMod\lang
+    copying minerl\Malmo\Minecraft\src\main\resources\assets\MalmoMod\lang\en_US.lang -> build\lib\minerl\Malmo\Minecraft\src\main\resources\assets\MalmoMod\lang
+    creating build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\CMakeLists.txt -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\MinecraftBlocks.txt -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\MinecraftItems.txt -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\Mission.xsd -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\MissionEnded.xsd -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\MissionHandlers.xsd -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\MissionInit.xsd -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\Types.xsd -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\Types.xsd.in -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\items.json -> build\lib\minerl\Malmo\Schemas
+    copying minerl\Malmo\Schemas\links.xml -> build\lib\minerl\Malmo\Schemas
+    copying minerl\env\info.npz -> build\lib\minerl\env
+    creating build\lib\minerl\herobraine\data
+    copying minerl\herobraine\data\pipeline_with_reward.py -> build\lib\minerl\herobraine\data
+    creating build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_grape_changeling-17_11320-12497 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_grape_changeling-37_2320-24419 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_grape_changeling-47_24752-27488 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_grape_changeling-47_27537-30355 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_grape_changeling-7_3767-7304 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_grape_changeling-9_2373-4247 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_zucchini_basilisk-13_11145-12287 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_zucchini_basilisk-13_32760-33816 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_zucchini_basilisk-13_33822-35058 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\absolute_zucchini_basilisk-3_176-72985 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\aggravating_artichoke_harpy-11_28690-29053 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\agonizing_kale_tree_nymph-21_6359-9634 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\agonizing_kale_tree_nymph-23_12431-13377 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\agonizing_kale_tree_nymph-23_605-1562 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\agonizing_kale_tree_nymph-34_16568-26750 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\alarming_arugula_medusa-11_1755-2145 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\alarming_arugula_medusa-12_56510-57084 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\alarming_arugula_medusa-12_60585-61411 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\all_orange_djinn-4_66221-67094 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\all_orange_djinn-7_109-16624 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\ample_salad_doppelganger-1_12735-13485 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\ancient_garlic_shapeshifter-5_77487-82994 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\anxious_lemon_lake_spirit-18_562-2780 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\anxious_lemon_lake_spirit-18_6266-8959 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\anxious_lemon_lake_spirit-1_40524-40828 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\anxious_lemon_lake_spirit-1_54792-62888 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\any_lemon_sea_monster-23_198-830119 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\any_lemon_sea_monster-3_1468-27826 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\artistic_bamboo_shoot_lake_spirit-5_49467-133362 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\bogus_guava_djinn-17_31716-33336 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\bogus_guava_djinn-17_61051-62099 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\brisk_cucumber_ogre-8_10840-12080 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\burdensome_durian_polyphemus-10_4625-5344 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\cheery_acorn_squash_spirit-1_863-2470 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\cheery_acorn_squash_spirit-8_542-6571 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\colorless_mung_bean_dragon-18_104-84733 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\colorless_mung_bean_dragon-20_13038-13665 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\common_fennel_genii-3_51968-53879 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\conscious_tangerine_rain_bird-23_47288-47644 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\conscious_tangerine_rain_bird-23_47647-48727 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\conscious_tangerine_rain_bird-23_59334-59714 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\conscious_tangerine_rain_bird-41_108595-109350 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\conscious_tangerine_rain_bird-41_131691-132204 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\conscious_tangerine_rain_bird-41_229718-230050 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\conscious_tangerine_rain_bird-41_68178-76364 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\content_squash_angel-3_21423-22960 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\cool_sweet_potato_nymph-13_5564-6194 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\cool_sweet_potato_nymph-14_974-1946 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\cute_breadfruit_spirit-8_3403-5032 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\equal_olive_chimera-23_1905-3353 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\equal_olive_chimera-23_3480-4312 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\equal_olive_chimera-9_13991-14521 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\excellent_mango_beast-10_30171-97722 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\excellent_mango_beast-11_31799-32886 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\excellent_mango_beast-9_747-25452 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\excellent_pluot_behemoth-11_66582-67234 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\excellent_pluot_behemoth-15_3889-6460 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\extroverted_broccoli_griffin-4_22766-25727 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\extroverted_broccoli_griffin-4_6992-7666 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\failing_soybean_werewolf-1_52364-52912 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\failing_soybean_werewolf-1_61629-62050 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\failing_soybean_werewolf-1_82696-83175 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\failing_soybean_werewolf-1_83176-83851 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\failing_soybean_werewolf-7_1559-7644 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\failing_soybean_werewolf-7_709-1407 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\failing_soybean_werewolf-7_7827-13835 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\fair_sorrel_polyphemus-6_27982-47007 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\familiar_endive_ghost-1_17736-18698 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\familiar_endive_ghost-1_40480-41149 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\familiar_endive_ghost-2_38068-39183 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\familiar_endive_ghost-2_42525-42838 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\flustered_tuber_doppelganger-16_3227-5841 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\flustered_tuber_doppelganger-1_90385-91508 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\frozen_date_godzilla-7_2031-5439 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\giving_nectarine_ogre-3_11838-37187 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\giving_nectarine_ogre-4_135-14020 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\glistening_okra_golum-22_17358-19917 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\grimy_garlic_shapeshifter-7_16160-16791 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\hideous_breadfruit_golum-5_1638-2949 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\hideous_breadfruit_golum-5_516-1277 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\hoarse_watermelon_gargoyle-12_23106-34352 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\hoarse_watermelon_gargoyle-18_4757-5329 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\idle_mandarin_orange_phoenix-17_74481-77060 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\idle_mandarin_orange_phoenix-20_11536-14126 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\idle_mandarin_orange_phoenix-20_2143-4883 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\idle_mandarin_orange_phoenix-20_8546-9377 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\inexperienced_strawberry_basilisk-5_248-4916 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\inexperienced_strawberry_basilisk-8_775003-855477 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juicy_jackfruit_griffin-1_116185-116542 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juicy_jackfruit_griffin-1_43030-43734 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juvenile_apple_angel-28_189-940 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juvenile_apple_angel-41_123773-124560 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juvenile_apple_angel-41_147894-153607 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juvenile_apple_angel-41_28859-30192 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juvenile_apple_angel-41_3912-9947 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juvenile_apple_angel-41_57453-57828 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juvenile_apple_angel-41_9961-11550 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\juvenile_apple_angel-7_67213-68839 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\kindly_lemon_mummy-11_48156-50185 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\kindly_lemon_mummy-17_2231-8360 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\last_prune_swamp_monster-2_15426-16306 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\last_prune_swamp_monster-2_8443-9143 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\last_prune_swamp_monster-3_8374-12184 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\late_basil_lake_spirit-7_20315-22791 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\leafy_cherry_dragon-2_1036-4533 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\limping_potato_horror-1_25107-26039 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\little_salsify_djinn-7_7547-8289 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\long_term_okra_dwarf-1_43441-44447 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\masculine_avocado_ogre-4_20425-21323 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\masculine_avocado_ogre-4_24735-25348 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\neighboring_mango_crone-6_9897-10561 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\other_pomegranite_orc-12_13497-13988 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\other_pomegranite_orc-12_14111-16188 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\other_pomegranite_orc-12_29519-31578 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\other_pomegranite_orc-12_36828-37533 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\other_pomegranite_orc-7_914-12373 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\other_pomegranite_orc-8_319-138390 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\poised_radicchio_titan-8_6128-6554 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\practical_kumquat_spirit-2_2809-6735 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\quiet_mandarin_orange_ghoul-14_15874-16303 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\raw_avocado_leprechaun-13_9395-9781 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\ready_wasabi_orc-14_11792-12362 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\rectangular_ugli_fruit_unicorn-7_216-103664 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\rectangular_ugli_fruit_unicorn-8_115-10148 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\remorseful_current_savage-15_5970-6429 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\right_basil_dragon-15_5344-6294 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\rigid_mustard_greens_monster-10_33457-34011 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\rigid_mustard_greens_monster-10_51444-52249 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\rigid_mustard_greens_monster-10_57622-58389 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\rigid_mustard_greens_monster-25_3576-3936 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\rigid_mustard_greens_monster-25_58882-63380 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\rigid_mustard_greens_monster-25_63563-70235 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\self_reliant_fig_doppelganger-1_26180-26752 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\self_reliant_fig_doppelganger-1_26883-27460 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\self_reliant_fig_doppelganger-1_33657-34011 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\self_reliant_fig_doppelganger-1_34012-36383 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\self_reliant_fig_doppelganger-1_6958-7525 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\skinny_rhubarb_demon-1_97477-98420 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\skinny_rhubarb_demon-3_8070-9232 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\smooth_kale_loch_ness_monster-1_10938-11291 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\smooth_kale_loch_ness_monster-1_13683-14012 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\sticky_chick_pea_gnome-21_30348-30783 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\sticky_chick_pea_gnome-22_19943-20350 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-12_28759-29137 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-12_43993-44402 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-24_3980-4577 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-24_413-2073 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-24_4579-7438 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-26_12425-13211 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-26_14157-24587 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-26_262-2509 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-26_4447-5476 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-3_36603-37120 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-3_71115-71570 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\subtle_iceberg_lettuce_nymph-3_94197-96340 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_10032-10520 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_16467-16821 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_19188-20021 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_22094-22533 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_2226-2752 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_24816-25704 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_29286-30085 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_34799-35802 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_4635-5287 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-12_7478-7850 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-17_11960-13118 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-9_18431-19132 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\svelte_cherry_devil-9_9336-9964 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\tempting_capers_shapeshifter-14_3495-7036 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\tempting_capers_shapeshifter-20_5065-12045 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\ugly_cress_orc-11_205-16471 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\ugly_cress_orc-13_2530-2844 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\ugly_cress_orc-1_49354-50155 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unfit_succotash_werewolf-1_401-1979 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-13_6148-6459 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-13_8585-9717 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-14_21072-21421 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-17_120557-121162 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-17_13229-14608 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-17_3118-3469 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-17_63785-65004 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-8_12742-16488 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-8_4164-5660 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\unselfish_blood_orange_savage-8_6111-7135 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\virtuous_mustard_greens_raven_spirit-3_300-22800 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\virtuous_mustard_greens_raven_spirit-8_19313-19710 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\virtuous_mustard_greens_raven_spirit-8_24338-24792 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\virtuous_mustard_greens_raven_spirit-8_25341-28701 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\wary_salsa_werewolf-11_11236-16874 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\wary_salsa_werewolf-11_16898-21086 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\wary_salsa_werewolf-2_45127-46042 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\wary_salsa_werewolf-3_37584-38601 -> build\lib\minerl\data\assets\blacklist
+    copying minerl\data\assets\blacklist\wasteful_rocket_polyphemus-14_14405-16048 -> build\lib\minerl\data\assets\blacklist
+    creating build\lib\minerl\data\assets\template_minecraft
+    copying minerl\data\assets\template_minecraft\options.txt -> build\lib\minerl\data\assets\template_minecraft
+    copying minerl\data\assets\template_minecraft\usercache.json -> build\lib\minerl\data\assets\template_minecraft
+    copying minerl\data\assets\template_minecraft\usernamecache.json -> build\lib\minerl\data\assets\template_minecraft
+    creating build\lib\minerl\data\assets\template_minecraft\config
+    copying minerl\data\assets\template_minecraft\config\Mercurius.cfg -> build\lib\minerl\data\assets\template_minecraft\config
+    copying minerl\data\assets\template_minecraft\config\forge.cfg -> build\lib\minerl\data\assets\template_minecraft\config
+    copying minerl\data\assets\template_minecraft\config\forgeChunkLoading.cfg -> build\lib\minerl\data\assets\template_minecraft\config
+    copying minerl\data\assets\template_minecraft\config\replaymod-online.cfg -> build\lib\minerl\data\assets\template_minecraft\config
+    copying minerl\data\assets\template_minecraft\config\replaymod-render.cfg -> build\lib\minerl\data\assets\template_minecraft\config
+    copying minerl\data\assets\template_minecraft\config\replaymod.cfg -> build\lib\minerl\data\assets\template_minecraft\config
+    copying minerl\data\assets\template_minecraft\config\splash.properties -> build\lib\minerl\data\assets\template_minecraft\config
+    creating build\lib\minerl\data\assets\template_minecraft\local
+    copying minerl\data\assets\template_minecraft\local\local_mercurius.cfg -> build\lib\minerl\data\assets\template_minecraft\local
+    creating build\lib\minerl\data\assets\template_minecraft\mods
+    copying minerl\data\assets\template_minecraft\mods\highres.jar.old -> build\lib\minerl\data\assets\template_minecraft\mods
+    copying minerl\data\assets\template_minecraft\mods\low_res.jar.master -> build\lib\minerl\data\assets\template_minecraft\mods
+    copying minerl\data\assets\template_minecraft\mods\low_res_default_with_env_var.jar -> build\lib\minerl\data\assets\template_minecraft\mods
+    copying minerl\data\assets\template_minecraft\mods\low_res_simon_3.jar.old -> build\lib\minerl\data\assets\template_minecraft\mods
+    creating build\lib\minerl\data\pipeline\parser
+    copying minerl\data\pipeline\parser\Makefile -> build\lib\minerl\data\pipeline\parser
+    copying minerl\data\pipeline\parser\README.md -> build\lib\minerl\data\pipeline\parser
+    copying minerl\data\pipeline\parser\parse.c -> build\lib\minerl\data\pipeline\parser
+    copying minerl\data\pipeline\parser\parse_action.c -> build\lib\minerl\data\pipeline\parser
+    copying minerl\data\pipeline\parser\testing.c -> build\lib\minerl\data\pipeline\parser
+    creating build\lib\minerl\herobraine\env_specs\__pycache__
+    copying minerl\herobraine\env_specs\__pycache__\__init__.cpython-37.pyc -> build\lib\minerl\herobraine\env_specs\__pycache__
+    copying minerl\herobraine\env_specs\__pycache__\basalt_specs.cpython-37.pyc -> build\lib\minerl\herobraine\env_specs\__pycache__
+    copying minerl\herobraine\env_specs\__pycache__\navigate_specs.cpython-37.pyc -> build\lib\minerl\herobraine\env_specs\__pycache__
+    copying minerl\herobraine\env_specs\__pycache__\obtain_specs.cpython-37.pyc -> build\lib\minerl\herobraine\env_specs\__pycache__
+    copying minerl\herobraine\env_specs\__pycache__\simple_embodiment.cpython-37.pyc -> build\lib\minerl\herobraine\env_specs\__pycache__
+    copying minerl\herobraine\env_specs\__pycache__\simple_env_spec.cpython-37.pyc -> build\lib\minerl\herobraine\env_specs\__pycache__
+    copying minerl\herobraine\env_specs\__pycache__\test_env_regressions.cpython-37-pytest-5.3.5.pyc -> build\lib\minerl\herobraine\env_specs\__pycache__
+    copying minerl\herobraine\env_specs\__pycache__\treechop_specs.cpython-37.pyc -> build\lib\minerl\herobraine\env_specs\__pycache__
+    creating build\lib\minerl\herobraine\env_specs\obfuscators
+    creating build\lib\minerl\herobraine\env_specs\obfuscators\comp
+    copying minerl\herobraine\env_specs\obfuscators\comp\size -> build\lib\minerl\herobraine\env_specs\obfuscators\comp
+    creating build\lib\minerl\herobraine\env_specs\obfuscators\comp\v2
+    copying minerl\herobraine\env_specs\obfuscators\comp\v2\action.secret.compat -> build\lib\minerl\herobraine\env_specs\obfuscators\comp\v2
+    copying minerl\herobraine\env_specs\obfuscators\comp\v2\obs.secret.compat -> build\lib\minerl\herobraine\env_specs\obfuscators\comp\v2
+    copying minerl\herobraine\env_specs\obfuscators\comp\v2\size -> build\lib\minerl\herobraine\env_specs\obfuscators\comp\v2
+    creating build\lib\minerl\herobraine\env_specs\obfuscators\comp\v3
+    copying minerl\herobraine\env_specs\obfuscators\comp\v3\act.secret.compat.npz -> build\lib\minerl\herobraine\env_specs\obfuscators\comp\v3
+    copying minerl\herobraine\env_specs\obfuscators\comp\v3\obs.secret.compat.npz -> build\lib\minerl\herobraine\env_specs\obfuscators\comp\v3
+    copying minerl\herobraine\env_specs\obfuscators\comp\v3\size -> build\lib\minerl\herobraine\env_specs\obfuscators\comp\v3
+    creating build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\README.mD -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\navigation.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\navigationDense.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\navigationDenseFixedMap.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\navigationExtreme.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\navigationExtremeDense.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\obtainDebug.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\obtainDebugDense.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\obtainDiamond.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\obtainDiamondDense.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\obtainIronPickaxe.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\obtainIronPickaxeDense.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\treechop.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\env_specs\test\treechopDebug.xml -> build\lib\minerl\herobraine\env_specs\test
+    copying minerl\herobraine\hero\mc_constants.json -> build\lib\minerl\herobraine\hero
+    copying minerl\herobraine\hero\mission.xml.j2 -> build\lib\minerl\herobraine\hero
+    running build_ext
+    running install_lib
+    Downloading https://services.gradle.org/distributions/gradle-4.10.2-all.zip
+    ..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+    Unzipping C:\Users\SU - NB0103\AppData\Local\Temp\pip-install-bpz909c4\minerl_dc6fc49e7cb74f9490844f857e9b4466\build\lib\minerl\Malmo\Minecraft\run\gradle\wrapper\dists\gradle-4.10.2-all\9fahxiiecdb76a5g3aw9oi8rv\gradle-4.10.2-all.zip to C:\Users\SU - NB0103\AppData\Local\Temp\pip-install-bpz909c4\minerl_dc6fc49e7cb74f9490844f857e9b4466\build\lib\minerl\Malmo\Minecraft\run\gradle\wrapper\dists\gradle-4.10.2-all\9fahxiiecdb76a5g3aw9oi8rv
+
+    Welcome to Gradle 4.10.2!
+
+    Here are the highlights of this release:
+     - Incremental Java compilation by default
+     - Periodic Gradle caches cleanup
+     - Gradle Kotlin DSL 1.0-RC6
+     - Nested included builds
+     - SNAPSHOT plugin versions in the `plugins {}` block
+
+    For more details see https://docs.gradle.org/4.10.2/release-notes.html
+
+
+    FAILURE: Build failed with an exception.
+
+    * What went wrong:
+    Could not create service of type ClassLoaderRegistry using GlobalScopeServices.createClassLoaderRegistry().
+
+    * Try:
+    Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+    * Get more help at https://help.gradle.org
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "C:\Users\SU - NB0103\AppData\Local\Temp\pip-install-bpz909c4\minerl_dc6fc49e7cb74f9490844f857e9b4466\setup.py", line 167, in <module>
+        setuptools.setup(
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\setuptools\__init__.py", line 153, in setup
+        return distutils.core.setup(**attrs)
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\distutils\core.py", line 148, in setup
+        dist.run_commands()
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\distutils\dist.py", line 966, in run_commands
+        self.run_command(cmd)
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\distutils\dist.py", line 985, in run_command
+        cmd_obj.run()
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\setuptools\command\install.py", line 61, in run
+        return orig.install.run(self)
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\distutils\command\install.py", line 558, in run
+        self.run_command(cmd_name)
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\distutils\cmd.py", line 313, in run_command
+        self.distribution.run_command(command)
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\distutils\dist.py", line 985, in run_command
+        cmd_obj.run()
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\setuptools\command\install_lib.py", line 11, in run
+        self.build()
+      File "C:\Users\SU - NB0103\AppData\Local\Temp\pip-install-bpz909c4\minerl_dc6fc49e7cb74f9490844f857e9b4466\setup.py", line 88, in build
+        build_minecraft(MALMO_DIR, os.path.join(
+      File "C:\Users\SU - NB0103\AppData\Local\Temp\pip-install-bpz909c4\minerl_dc6fc49e7cb74f9490844f857e9b4466\setup.py", line 141, in build_minecraft
+        subprocess.check_call('{} -g run/gradle shadowJar'.format(gradlew).split(' '))
+      File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\subprocess.py", line 373, in check_call
+        raise CalledProcessError(retcode, cmd)
+    subprocess.CalledProcessError: Command '['gradlew.bat', '-g', 'run/gradle', 'shadowJar']' returned non-zero exit status 1.
+    building Minecraft from  C:\Users\SU - NB0103\AppData\Local\Temp\pip-install-bpz909c4\minerl_dc6fc49e7cb74f9490844f857e9b4466\minerl\Malmo, build dir: build\lib\minerl\Malmo
+    copying source dir
+    CALLING SETUP.
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: 'C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\SU - NB0103\\AppData\\Local\\Temp\\pip-install-bpz909c4\\minerl_dc6fc49e7cb74f9490844f857e9b4466\\setup.py'"'"'; __file__='"'"'C:\\Users\\SU - NB0103\\AppData\\Local\\Temp\\pip-install-bpz909c4\\minerl_dc6fc49e7cb74f9490844f857e9b4466\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\SU - NB0103\AppData\Local\Temp\pip-record-uole7s4s\install-record.txt' --single-version-externally-managed --compile --install-headers 'C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\Include\minerl' Check the logs for full command output.
+WARNING: You are using pip version 21.3.1; however, version 22.0.4 is available.
+You should consider upgrading via the 'C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\python.exe -m pip install --upgrade pip' command.
+Traceback (most recent call last):
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 498, in __exit__
+    if cb(*exc_details):
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\utils\temp_dir.py", line 156, in __exit__
+    self.cleanup()
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\utils\temp_dir.py", line 173, in cleanup
+    rmtree(self._path)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 326, in wrapped_f
+    return self(f, *args, **kw)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 406, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 362, in iter
+    raise retry_exc.reraise()
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 195, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 409, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\utils\misc.py", line 126, in rmtree
+    shutil.rmtree(dir, ignore_errors=ignore_errors, onerror=rmtree_errorhandler)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 740, in rmtree
+    return _rmtree_unsafe(path, onerror)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 613, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 613, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 613, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  [Previous line repeated 11 more times]
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 618, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 616, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\SU - NB0103\\AppData\\Local\\Temp\\pip-install-bpz909c4\\minerl_dc6fc49e7cb74f9490844f857e9b4466\\build\\lib\\minerl\\Malmo\\Minecraft\\run\\gradle\\wrapper\\dists\\gradle-4.10.2-all\\9fahxiiecdb76a5g3aw9oi8rv\\gradle-4.10.2\\lib\\plugins\\gradle-jacoco-4.10.2.jar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\Scripts\pip3.exe\__main__.py", line 7, in <module>
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\cli\main.py", line 70, in main
+    return command.main(cmd_args)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\cli\base_command.py", line 98, in main
+    return self._main(args)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 124, in __exit__
+    next(self.gen)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\cli\command_context.py", line 20, in main_context
+    yield
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 513, in __exit__
+    raise exc_details[1]
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\utils\temp_dir.py", line 70, in tempdir_registry
+    yield _tempdir_registry
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 498, in __exit__
+    if cb(*exc_details):
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 124, in __exit__
+    next(self.gen)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\utils\temp_dir.py", line 36, in global_tempdir_manager
+    _tempdir_manager = old_tempdir_manager
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 513, in __exit__
+    raise exc_details[1]
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 498, in __exit__
+    if cb(*exc_details):
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\utils\temp_dir.py", line 156, in __exit__
+    self.cleanup()
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\utils\temp_dir.py", line 173, in cleanup
+    rmtree(self._path)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 326, in wrapped_f
+    return self(f, *args, **kw)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 406, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 362, in iter
+    raise retry_exc.reraise()
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 195, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\concurrent\futures\_base.py", line 438, in result
+    return self.__get_result()
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\concurrent\futures\_base.py", line 390, in __get_result
+    raise self._exception
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_vendor\tenacity\__init__.py", line 409, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\site-packages\pip\_internal\utils\misc.py", line 126, in rmtree
+    shutil.rmtree(dir, ignore_errors=ignore_errors, onerror=rmtree_errorhandler)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 740, in rmtree
+    return _rmtree_unsafe(path, onerror)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 613, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 613, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 613, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  [Previous line repeated 12 more times]
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 618, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "C:\Users\SU - NB0103\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 616, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\SU - NB0103\\AppData\\Local\\Temp\\pip-install-bpz909c4\\minerl_dc6fc49e7cb74f9490844f857e9b4466\\build\\lib\\minerl\\Malmo\\Minecraft\\run\\gradle\\wrapper\\dists\\gradle-4.10.2-all\\9fahxiiecdb76a5g3aw9oi8rv\\gradle-4.10.2\\lib\\plugins\\gradle-reporting-4.10.2.jar'
+
+C:\Users\SU - NB0103>
+C:\Users\SU - NB0103>
